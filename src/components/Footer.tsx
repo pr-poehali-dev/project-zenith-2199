@@ -46,7 +46,7 @@ export default function Footer({ language }: FooterProps) {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-warm-white mb-4">BarberMaster</h3>
+            <h3 className="text-warm-white mb-4">Сенюкова Татьяна</h3>
             <small className="text-warm-white/70">{t.subtitle}</small>
           </div>
 
@@ -85,7 +85,7 @@ export default function Footer({ language }: FooterProps) {
         </div>
 
         <div className="border-t border-warm-white/20 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-warm-white/70">
-          <small>&copy; 2026 BarberMaster. {t.copyright}</small>
+          <small>&copy; 2026 Сенюкова Татьяна. {t.copyright}</small>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-warm-white transition-colors">
               {t.privacyPolicy}

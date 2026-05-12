@@ -66,7 +66,7 @@ export default function Navigation({ language, onLanguageChange }: NavigationPro
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className={`${logoColor} font-serif text-2xl font-normal tracking-wide transition-colors duration-300`}>
-            BarberMaster
+            Сенюкова Татьяна
           </div>
 
           {/* Desktop Menu */}
