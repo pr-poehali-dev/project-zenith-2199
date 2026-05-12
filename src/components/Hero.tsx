@@ -14,7 +14,7 @@ const translations = {
     description: "Erlernen Sie die Kunst des Barbierens von einem echten Profi — von klassischen Schnitten bis zu modernen Techniken",
   },
   ru: {
-    title: "Мастер Барбер",
+    title: "Барберинг с нуля",
     subtitle: "Профессиональные курсы по барберингу",
     description: "Освойте искусство барберинга у настоящего мастера — от классических стрижек до современных техник",
   },
