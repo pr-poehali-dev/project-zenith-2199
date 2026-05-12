@@ -4,19 +4,19 @@ interface HeroProps {
 
 const translations = {
   en: {
-    title: "Alexander Voss",
-    subtitle: "Classical Pianist",
-    description: "A virtuoso performer captivating audiences at the world's most prestigious concert halls",
+    title: "Barber Master",
+    subtitle: "Professional Barbering Courses",
+    description: "Learn the art of barbering from a true professional — from classic cuts to modern techniques",
   },
   de: {
-    title: "Alexander Voss",
-    subtitle: "Klassischer Pianist",
-    description: "Ein virtuoser Performer, der Publikum in den renommiertesten Konzertsalen der Welt fasziniert",
+    title: "Barber Master",
+    subtitle: "Professionelle Barbier-Kurse",
+    description: "Erlernen Sie die Kunst des Barbierens von einem echten Profi — von klassischen Schnitten bis zu modernen Techniken",
   },
   ru: {
-    title: "Александр Фосс",
-    subtitle: "Классический пианист",
-    description: "Виртуозный исполнитель, очаровывающий публику в престижнейших концертных залах мира",
+    title: "Мастер Барбер",
+    subtitle: "Профессиональные курсы по барберингу",
+    description: "Освойте искусство барберинга у настоящего мастера — от классических стрижек до современных техник",
   },
 }
 
@@ -28,8 +28,8 @@ export default function Hero({ language }: HeroProps) {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF3797.JPG-D5CA7ICwqzRlSb4xwdgFIdtxI4Epof.jpeg"
-          alt="Pianist performing"
+          src="https://cdn.poehali.dev/projects/5710d72e-7d57-4634-ab4f-ab0fca2f41dd/files/c8748bb0-dee4-437d-a790-568cbe79d2ae.jpg"
+          alt="Barber master"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-charcoal/35"></div>

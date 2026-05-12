@@ -5,33 +5,33 @@ interface FooterProps {
 const translations = {
   en: {
     copyright: "All rights reserved.",
-    followMe: "Follow",
-    subtitle: "Classical Pianist",
+    followMe: "Follow us",
+    subtitle: "Professional Barbering Courses",
     quickLinks: "Quick Links",
-    biography: "Biography",
-    concerts: "Concerts",
+    biography: "About",
+    concerts: "Courses",
     gallery: "Gallery",
     privacyPolicy: "Privacy Policy",
     terms: "Terms",
   },
   de: {
     copyright: "Alle Rechte vorbehalten.",
-    followMe: "Folgen Sie mir",
-    subtitle: "Klassischer Pianist",
+    followMe: "Folgen Sie uns",
+    subtitle: "Professionelle Barbier-Kurse",
     quickLinks: "Schnelllinks",
-    biography: "Biographie",
-    concerts: "Konzerte",
+    biography: "Über mich",
+    concerts: "Kurse",
     gallery: "Galerie",
     privacyPolicy: "Datenschutz",
     terms: "AGB",
   },
   ru: {
     copyright: "Все права защищены.",
-    followMe: "Соцсети",
-    subtitle: "Классический пианист",
+    followMe: "Мы в соцсетях",
+    subtitle: "Профессиональные курсы по барберингу",
     quickLinks: "Навигация",
-    biography: "Биография",
-    concerts: "Концерты",
+    biography: "О мастере",
+    concerts: "Курсы",
     gallery: "Галерея",
     privacyPolicy: "Политика конфиденциальности",
     terms: "Условия",
@@ -46,7 +46,7 @@ export default function Footer({ language }: FooterProps) {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-warm-white mb-4">А. Фосс</h3>
+            <h3 className="text-warm-white mb-4">BarberMaster</h3>
             <small className="text-warm-white/70">{t.subtitle}</small>
           </div>
 
@@ -85,7 +85,7 @@ export default function Footer({ language }: FooterProps) {
         </div>
 
         <div className="border-t border-warm-white/20 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-warm-white/70">
-          <small>&copy; 2025 Александр Фосс. {t.copyright}</small>
+          <small>&copy; 2026 BarberMaster. {t.copyright}</small>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-warm-white transition-colors">
               {t.privacyPolicy}
