@@ -30,7 +30,7 @@ export default function Hero({ language }: HeroProps) {
         <img
           src="https://cdn.poehali.dev/projects/5710d72e-7d57-4634-ab4f-ab0fca2f41dd/bucket/a5e3e20e-866d-4cc7-9713-1c3eec7e657c.jpeg"
           alt="Barber master"
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-cover object-[center_20%]"
         />
         <div className="absolute inset-0 bg-charcoal/35"></div>
       </div>
