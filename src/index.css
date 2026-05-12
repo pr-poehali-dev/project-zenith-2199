@@ -103,7 +103,7 @@
   }
 
   h1 {
-    @apply text-5xl md:text-7xl font-serif font-normal leading-tight;
+    @apply text-4xl md:text-5xl font-display font-normal leading-tight;
   }
 
   h2 {

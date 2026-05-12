@@ -21,6 +21,7 @@ export default {
 			fontFamily: {
 				sans: ['Lato', 'sans-serif'],
 				serif: ['Playfair Display', 'serif'],
+				display: ['Russo One', 'sans-serif'],
 			},
 			colors: {
 				cream: 'var(--cream)',
