@@ -39,6 +39,7 @@ export default function Hero({ language }: HeroProps) {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <h1 className="text-white mb-6 animate-fade-in-up">{t.title}</h1>
+          <h3 className="text-white font-light mb-8 animate-fade-in-up animation-delay-100">{t.subtitle}</h3>
           <div className="line-accent mb-10 animate-fade-in-up animation-delay-200"></div>
           <p className="text-white font-light max-w-2xl mb-16 animate-fade-in-up animation-delay-300">{t.description}</p>
 
