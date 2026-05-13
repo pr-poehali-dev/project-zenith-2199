@@ -77,6 +77,9 @@ export default function Footer({ language }: FooterProps) {
               <a href="https://vk.com/club215781011" target="_blank" rel="noopener noreferrer" className="text-warm-white/70 hover:text-gold transition-colors">
                 ВКонтакте
               </a>
+              <a href="https://max.ru/phone/79771536138" target="_blank" rel="noopener noreferrer" className="text-warm-white/70 hover:text-gold transition-colors">
+                Max
+              </a>
             </div>
           </div>
         </div>
