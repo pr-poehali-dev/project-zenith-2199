@@ -9,7 +9,7 @@ const translations = {
   en: {
     heading: "Sign Up for a Course",
     subheading: "Leave your details and we'll get back to you within a day",
-    email: "Email",
+    messenger: "Max Messenger",
     phone: "Phone",
     message: "Which course interests you?",
     send: "Send Application",
@@ -22,7 +22,7 @@ const translations = {
   de: {
     heading: "Für einen Kurs anmelden",
     subheading: "Hinterlassen Sie Ihre Daten und wir melden uns innerhalb eines Tages",
-    email: "E-Mail",
+    messenger: "Max Messenger",
     phone: "Telefon",
     message: "Welcher Kurs interessiert Sie?",
     send: "Anfrage senden",
@@ -35,7 +35,7 @@ const translations = {
   ru: {
     heading: "Записаться на курс",
     subheading: "Оставьте свои данные и мы свяжемся с вами в течение дня",
-    email: "Эл. почта",
+    messenger: "Мессенджер Max",
     phone: "Телефон",
     message: "Какой курс вас интересует?",
     send: "Отправить заявку",
@@ -49,17 +49,14 @@ const translations = {
 
 export default function Contact({ language }: ContactProps) {
   const t = translations[language]
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" })
+  const [formData, setFormData] = useState({ name: "", message: "" })
   const [submitted, setSubmitted] = useState(false)
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    const mailtoLink = `mailto:hello@example.com?subject=${encodeURIComponent(`New message from ${formData.name}`)}&body=${encodeURIComponent(`From: ${formData.email}\n\n${formData.message}`)}`
-    window.location.href = mailtoLink
-
     setSubmitted(true)
-    setFormData({ name: "", email: "", message: "" })
+    setFormData({ name: "", message: "" })
     setTimeout(() => setSubmitted(false), 5000)
   }
 
@@ -76,8 +73,8 @@ export default function Contact({ language }: ContactProps) {
           {/* Contact Info */}
           <div className="space-y-8 animate-fade-in-up">
             <div>
-              <small className="font-medium text-charcoal/70 mb-2 block">{t.email}</small>
-              <p className="text-charcoal">hello@example.com</p>
+              <small className="font-medium text-charcoal/70 mb-2 block">{t.messenger}</small>
+              <a href="https://max.ru/phone/79771536138" className="text-charcoal hover:text-gold transition-colors">+7 (977) 153-61-38</a>
             </div>
             <div>
               <small className="font-medium text-charcoal/70 mb-2 block">{t.phone}</small>
@@ -102,16 +99,6 @@ export default function Contact({ language }: ContactProps) {
                 placeholder={t.name}
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                required
-                className="w-full bg-warm-white border border-taupe/30 px-4 py-3 text-charcoal placeholder-charcoal/50 focus:outline-none focus:border-gold transition-colors"
-              />
-            </div>
-            <div>
-              <input
-                type="email"
-                placeholder={t.email}
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 required
                 className="w-full bg-warm-white border border-taupe/30 px-4 py-3 text-charcoal placeholder-charcoal/50 focus:outline-none focus:border-gold transition-colors"
               />
