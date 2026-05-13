@@ -74,11 +74,8 @@ export default function Footer({ language }: FooterProps) {
           <div>
             <h3 className="text-warm-white mb-4">{t.followMe}</h3>
             <div className="flex gap-4">
-              <a href="https://instagram.com" className="text-warm-white/70 hover:text-gold transition-colors">
-                Instagram
-              </a>
-              <a href="https://facebook.com" className="text-warm-white/70 hover:text-gold transition-colors">
-                Facebook
+              <a href="https://vk.com/club215781011" target="_blank" rel="noopener noreferrer" className="text-warm-white/70 hover:text-gold transition-colors">
+                ВКонтакте
               </a>
             </div>
           </div>
