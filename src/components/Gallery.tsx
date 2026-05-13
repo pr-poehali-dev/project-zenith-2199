@@ -40,7 +40,7 @@ const photos = [
   {
     id: 5,
     image: "https://cdn.poehali.dev/projects/5710d72e-7d57-4634-ab4f-ab0fca2f41dd/bucket/4c1cca6a-1c5b-4ae3-a366-b106577e0fdc.png",
-    title: { en: "Haircut", de: "Haarschnitt", ru: "Стрижка" },
+    title: { en: "Practice on models", de: "Übung an Modellen", ru: "Отработка на моделях" },
   },
 ]
 
@@ -90,7 +90,7 @@ export default function Gallery({ language }: GalleryProps) {
                 <img
                   src={item.image || "/placeholder.svg"}
                   alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-4">
