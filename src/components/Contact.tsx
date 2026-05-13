@@ -16,7 +16,7 @@ const translations = {
     location: "Location",
     name: "Your Name",
     successMessage: "Your application has been sent! We'll contact you soon.",
-    locationValue: "Barbershop Studio, city centre",
+    locationValue: "ul. Egorova, 8B, Vladimir, TC Vostok-1",
     phoneValue: "+7 (999) 123-45-67",
   },
   de: {
@@ -29,7 +29,7 @@ const translations = {
     location: "Standort",
     name: "Ihr Name",
     successMessage: "Ihre Anfrage wurde gesendet! Wir melden uns bald.",
-    locationValue: "Barbershop Studio, Stadtzentrum",
+    locationValue: "ul. Egorova, 8B, Wladimir, TC Vostok-1",
     phoneValue: "+7 (999) 123-45-67",
   },
   ru: {
@@ -42,7 +42,7 @@ const translations = {
     location: "Адрес студии",
     name: "Ваше имя",
     successMessage: "Заявка отправлена! Мы свяжемся с вами в ближайшее время.",
-    locationValue: "Барбер-студия, центр города",
+    locationValue: "ул. Егорова, 8Б, Владимир, ТЦ Восток-1",
     phoneValue: "+7 (999) 123-45-67",
   },
 }
