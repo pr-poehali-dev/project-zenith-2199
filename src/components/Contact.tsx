@@ -17,7 +17,7 @@ const translations = {
     name: "Your Name",
     successMessage: "Your application has been sent! We'll contact you soon.",
     locationValue: "ul. Egorova, 8B, Vladimir, TC Vostok-1",
-    phoneValue: "+7 (999) 123-45-67",
+    phoneValue: "+7 (977) 153-61-38",
   },
   de: {
     heading: "Für einen Kurs anmelden",
@@ -30,7 +30,7 @@ const translations = {
     name: "Ihr Name",
     successMessage: "Ihre Anfrage wurde gesendet! Wir melden uns bald.",
     locationValue: "ul. Egorova, 8B, Wladimir, TC Vostok-1",
-    phoneValue: "+7 (999) 123-45-67",
+    phoneValue: "+7 (977) 153-61-38",
   },
   ru: {
     heading: "Записаться на курс",
@@ -43,7 +43,7 @@ const translations = {
     name: "Ваше имя",
     successMessage: "Заявка отправлена! Мы свяжемся с вами в ближайшее время.",
     locationValue: "ул. Егорова, 8Б, Владимир, ТЦ Восток-1",
-    phoneValue: "+7 (999) 123-45-67",
+    phoneValue: "+7 (977) 153-61-38",
   },
 }
 
