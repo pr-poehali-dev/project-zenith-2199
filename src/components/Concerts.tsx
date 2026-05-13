@@ -17,6 +17,12 @@ const translations = {
   },
 }
 
+const courseDescription = {
+  ru: "На курсах вы:\n• освоите профессиональные техники стрижек и ухода за бородой;\n• научитесь работать с разными типами волос и формами лица;\n• узнаете секреты общения с клиентами;\n• получите практические навыки от опытного мастера.\n\nМы гарантируем индивидуальный подход: группа состоит не более чем из 4 человек — каждый ученик получает достаточно времени и внимания от преподавателя.\n\nПроцесс обучения:\n• начальный этап — отработка техник на учебных головах;\n• продвинутый этап — работа с реальными клиентами под наблюдением наставника.\n\n5 недель обучения — и у вас есть практический опыт, портфолио и готовность к трудоустройству.",
+  en: "During the course you will:\n• master professional haircut and beard care techniques;\n• learn to work with different hair types and face shapes;\n• discover the secrets of client communication;\n• gain practical skills from an experienced master.\n\nWe guarantee individual attention: groups of no more than 4 students.\n\nTraining process:\n• initial stage — technique practice on training heads;\n• advanced stage — working with real clients under mentor supervision.\n\n5 weeks of training — and you have practical experience, a portfolio and readiness for employment.",
+  de: "Im Kurs werden Sie:\n• professionelle Haarschnitt- und Bartpflegetechniken beherrschen;\n• mit verschiedenen Haartypen und Gesichtsformen arbeiten;\n• die Geheimnisse der Kundenkommunikation lernen;\n• praktische Fähigkeiten von einem erfahrenen Meister erwerben.\n\nWir garantieren individuelle Betreuung: Gruppen von maximal 4 Schülern.\n\nLernprozess:\n• Anfangsstufe — Technikübungen an Lernköpfen;\n• Fortgeschrittene Stufe — Arbeit mit echten Kunden unter Anleitung.\n\n5 Wochen Ausbildung — und Sie haben Praxiserfahrung, ein Portfolio und Berufsreife.",
+}
+
 const concerts = {
   en: [
     {
@@ -25,8 +31,8 @@ const concerts = {
       title: "Beginner Barbering Intensive",
       venue: "Barbershop Studio",
       location: "3 days · 5 spots left",
+      description: courseDescription.en,
     },
-
   ],
   de: [
     {
@@ -35,8 +41,8 @@ const concerts = {
       title: "Anfänger Intensivkurs Barbering",
       venue: "Barbershop Studio",
       location: "3 Tage · 5 Plätze frei",
+      description: courseDescription.de,
     },
-
   ],
   ru: [
     {
@@ -45,8 +51,8 @@ const concerts = {
       title: "Интенсив для начинающих барберов",
       venue: "Барбер-студия",
       location: "3 дня · осталось 5 мест",
+      description: courseDescription.ru,
     },
-
   ],
 }
 
@@ -74,6 +80,9 @@ export default function Concerts({ language }: ConcertsProps) {
                   <h3 className="text-charcoal mb-1">{concert.title}</h3>
                   <p className="text-charcoal/70 mb-1">{concert.venue}</p>
                   <small className="text-taupe">{concert.location}</small>
+                  {concert.description && (
+                    <p className="text-charcoal/80 text-sm leading-relaxed mt-4 whitespace-pre-line">{concert.description}</p>
+                  )}
                 </div>
                 <div className="flex justify-start md:justify-end">
                   <button className="text-gold hover:text-gold/80 transition-colors text-sm font-medium">
