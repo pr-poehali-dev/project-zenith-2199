@@ -16,88 +16,38 @@ const translations = {
   },
 }
 
+const photos = [
+  {
+    id: 1,
+    image: "https://cdn.poehali.dev/projects/5710d72e-7d57-4634-ab4f-ab0fca2f41dd/bucket/a940bd0c-7202-40c7-85f5-2ead3507dda8.png",
+    title: { en: "Practice", de: "Übung", ru: "Практика" },
+  },
+  {
+    id: 2,
+    image: "https://cdn.poehali.dev/projects/5710d72e-7d57-4634-ab4f-ab0fca2f41dd/bucket/94732e53-25bc-426e-ba01-5f2f29b0a1bd.png",
+    title: { en: "Blow-dry technique", de: "Föhntechnik", ru: "Техника укладки" },
+  },
+  {
+    id: 3,
+    image: "https://cdn.poehali.dev/projects/5710d72e-7d57-4634-ab4f-ab0fca2f41dd/bucket/850e4f06-3c8b-42c8-bf8f-089ba3d88ad4.png",
+    title: { en: "Scissor work", de: "Scherenarbeit", ru: "Работа ножницами" },
+  },
+  {
+    id: 4,
+    image: "https://cdn.poehali.dev/projects/5710d72e-7d57-4634-ab4f-ab0fca2f41dd/bucket/26171f53-4184-415c-b307-2e6a5fec5681.JPG",
+    title: { en: "With a student", de: "Mit Schüler", ru: "С учеником" },
+  },
+  {
+    id: 5,
+    image: "https://cdn.poehali.dev/projects/5710d72e-7d57-4634-ab4f-ab0fca2f41dd/bucket/4c1cca6a-1c5b-4ae3-a366-b106577e0fdc.png",
+    title: { en: "Haircut", de: "Haarschnitt", ru: "Стрижка" },
+  },
+]
+
 const galleryItems = {
-  en: [
-    {
-      id: 1,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF3862.JPG-QFjEqVJxprhU4vjLcesRXlZsTk7pRM.jpeg",
-      title: "Archway Portrait",
-    },
-    {
-      id: 2,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF3805.JPG-yq7ymSGUhJV4rq9yyyquEOMeXXYLDp.jpeg",
-      title: "Classical Courtyard",
-    },
-    {
-      id: 3,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF3938.JPG-OmXjCML5NpcJKstfM3mOWBFPt1HDzH.jpeg",
-      title: "Tunnel Lights",
-    },
-    {
-      id: 4,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF3768.JPG-Q3wacl3wQVQUhGT4jgw6Rf3OVCni3R.jpeg",
-      title: "Piano Moment",
-    },
-    {
-      id: 5,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF3917.JPG-iPCjoD8pZGUcg5qzfRnrkOrb14tK1E.jpeg",
-      title: "Urban Gallery",
-    },
-  ],
-  de: [
-    {
-      id: 1,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF3862.JPG-QFjEqVJxprhU4vjLcesRXlZsTk7pRM.jpeg",
-      title: "Bogenportrat",
-    },
-    {
-      id: 2,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF3805.JPG-yq7ymSGUhJV4rq9yyyquEOMeXXYLDp.jpeg",
-      title: "Klassischer Innenhof",
-    },
-    {
-      id: 3,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF3938.JPG-OmXjCML5NpcJKstfM3mOWBFPt1HDzH.jpeg",
-      title: "Tunnellichter",
-    },
-    {
-      id: 4,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF3768.JPG-Q3wacl3wQVQUhGT4jgw6Rf3OVCni3R.jpeg",
-      title: "Am Klavier",
-    },
-    {
-      id: 5,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF3917.JPG-iPCjoD8pZGUcg5qzfRnrkOrb14tK1E.jpeg",
-      title: "Stadtgalerie",
-    },
-  ],
-  ru: [
-    {
-      id: 1,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF3862.JPG-QFjEqVJxprhU4vjLcesRXlZsTk7pRM.jpeg",
-      title: "Портрет в арке",
-    },
-    {
-      id: 2,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF3805.JPG-yq7ymSGUhJV4rq9yyyquEOMeXXYLDp.jpeg",
-      title: "Классический двор",
-    },
-    {
-      id: 3,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF3938.JPG-OmXjCML5NpcJKstfM3mOWBFPt1HDzH.jpeg",
-      title: "Огни туннеля",
-    },
-    {
-      id: 4,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF3768.JPG-Q3wacl3wQVQUhGT4jgw6Rf3OVCni3R.jpeg",
-      title: "За роялем",
-    },
-    {
-      id: 5,
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF3917.JPG-iPCjoD8pZGUcg5qzfRnrkOrb14tK1E.jpeg",
-      title: "Городская галерея",
-    },
-  ],
+  en: photos.map((p) => ({ ...p, title: p.title.en })),
+  de: photos.map((p) => ({ ...p, title: p.title.de })),
+  ru: photos.map((p) => ({ ...p, title: p.title.ru })),
 }
 
 export default function Gallery({ language }: GalleryProps) {
