@@ -26,20 +26,7 @@ const concerts = {
       venue: "Barbershop Studio",
       location: "3 days · 5 spots left",
     },
-    {
-      date: "15.06.2026",
-      time: "10:00",
-      title: "Fades & Skin Fades Masterclass",
-      venue: "Barbershop Studio",
-      location: "1 day · 8 spots left",
-    },
-    {
-      date: "28.06.2026",
-      time: "11:00",
-      title: "Classic Men's Cuts & Hot Towel Shave",
-      venue: "Barbershop Studio",
-      location: "2 days · 6 spots left",
-    },
+
   ],
   de: [
     {
@@ -49,20 +36,7 @@ const concerts = {
       venue: "Barbershop Studio",
       location: "3 Tage · 5 Plätze frei",
     },
-    {
-      date: "15.06.2026",
-      time: "10:00",
-      title: "Fades & Skin Fades Masterclass",
-      venue: "Barbershop Studio",
-      location: "1 Tag · 8 Plätze frei",
-    },
-    {
-      date: "28.06.2026",
-      time: "11:00",
-      title: "Klassische Herrenschnitte & Rasur",
-      venue: "Barbershop Studio",
-      location: "2 Tage · 6 Plätze frei",
-    },
+
   ],
   ru: [
     {
@@ -72,20 +46,7 @@ const concerts = {
       venue: "Барбер-студия",
       location: "3 дня · осталось 5 мест",
     },
-    {
-      date: "15 июня 2026",
-      time: "10:00",
-      title: "Мастер-класс: Фейды и скин-фейды",
-      venue: "Барбер-студия",
-      location: "1 день · осталось 8 мест",
-    },
-    {
-      date: "28 июня 2026",
-      time: "11:00",
-      title: "Классические мужские стрижки и бритьё",
-      venue: "Барбер-студия",
-      location: "2 дня · осталось 6 мест",
-    },
+
   ],
 }
 
