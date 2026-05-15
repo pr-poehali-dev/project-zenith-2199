@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 interface ConcertsProps {
   language: "en" | "de" | "ru"
 }
@@ -6,14 +8,44 @@ const translations = {
   en: {
     heading: "Upcoming Courses",
     learnMore: "Sign Up",
+    modalTitle: "Sign Up for the Course",
+    name: "Your Name",
+    phone: "Phone Number",
+    email: "Email",
+    submit: "Submit",
+    cancel: "Cancel",
+    success: "Thank you! We will contact you shortly.",
+    namePlaceholder: "John Smith",
+    phonePlaceholder: "+1 234 567 8900",
+    emailPlaceholder: "email@example.com",
   },
   de: {
     heading: "Kommende Kurse",
     learnMore: "Anmelden",
+    modalTitle: "Für den Kurs anmelden",
+    name: "Ihr Name",
+    phone: "Telefonnummer",
+    email: "E-Mail",
+    submit: "Absenden",
+    cancel: "Abbrechen",
+    success: "Danke! Wir melden uns bald bei Ihnen.",
+    namePlaceholder: "Max Mustermann",
+    phonePlaceholder: "+49 123 456 7890",
+    emailPlaceholder: "email@beispiel.de",
   },
   ru: {
     heading: "Ближайшие курсы",
     learnMore: "Записаться",
+    modalTitle: "Запись на курс",
+    name: "Ваше имя",
+    phone: "Номер телефона",
+    email: "Email",
+    submit: "Отправить",
+    cancel: "Отмена",
+    success: "Спасибо! Мы свяжемся с вами в ближайшее время.",
+    namePlaceholder: "Иван Иванов",
+    phonePlaceholder: "+7 999 123 45 67",
+    emailPlaceholder: "email@example.com",
   },
 }
 
@@ -60,6 +92,27 @@ export default function Concerts({ language }: ConcertsProps) {
   const t = translations[language]
   const concertList = concerts[language]
 
+  const [isOpen, setIsOpen] = useState(false)
+  const [selectedCourse, setSelectedCourse] = useState("")
+  const [form, setForm] = useState({ name: "", phone: "", email: "" })
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleOpen = (title: string) => {
+    setSelectedCourse(title)
+    setSubmitted(false)
+    setForm({ name: "", phone: "", email: "" })
+    setIsOpen(true)
+  }
+
+  const handleClose = () => {
+    setIsOpen(false)
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    setSubmitted(true)
+  }
+
   return (
     <section id="concerts" className="py-32 md:py-48 bg-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -85,7 +138,10 @@ export default function Concerts({ language }: ConcertsProps) {
                   )}
                 </div>
                 <div className="flex justify-start md:justify-end">
-                  <button className="text-gold hover:text-gold/80 transition-colors text-sm font-medium">
+                  <button
+                    onClick={() => handleOpen(concert.title)}
+                    className="text-gold hover:text-gold/80 transition-colors text-sm font-medium"
+                  >
                     {t.learnMore} &rarr;
                   </button>
                 </div>
@@ -94,6 +150,83 @@ export default function Concerts({ language }: ConcertsProps) {
           ))}
         </div>
       </div>
+
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4"
+          onClick={handleClose}
+        >
+          <div
+            className="bg-background border border-taupe/30 rounded-lg p-8 w-full max-w-md shadow-xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 className="text-charcoal text-xl font-semibold mb-1">{t.modalTitle}</h3>
+            <p className="text-taupe text-sm mb-6">{selectedCourse}</p>
+
+            {submitted ? (
+              <div className="text-center py-6">
+                <p className="text-charcoal text-base">{t.success}</p>
+                <button
+                  onClick={handleClose}
+                  className="mt-6 text-gold hover:text-gold/80 transition-colors text-sm font-medium"
+                >
+                  {t.cancel}
+                </button>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <label className="block text-charcoal/70 text-sm mb-1">{t.name}</label>
+                  <input
+                    type="text"
+                    required
+                    value={form.name}
+                    onChange={(e) => setForm({ ...form, name: e.target.value })}
+                    placeholder={t.namePlaceholder}
+                    className="w-full bg-transparent border border-taupe/40 rounded px-3 py-2 text-charcoal placeholder-taupe/50 text-sm focus:outline-none focus:border-gold transition-colors"
+                  />
+                </div>
+                <div>
+                  <label className="block text-charcoal/70 text-sm mb-1">{t.phone}</label>
+                  <input
+                    type="tel"
+                    required
+                    value={form.phone}
+                    onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                    placeholder={t.phonePlaceholder}
+                    className="w-full bg-transparent border border-taupe/40 rounded px-3 py-2 text-charcoal placeholder-taupe/50 text-sm focus:outline-none focus:border-gold transition-colors"
+                  />
+                </div>
+                <div>
+                  <label className="block text-charcoal/70 text-sm mb-1">{t.email}</label>
+                  <input
+                    type="email"
+                    value={form.email}
+                    onChange={(e) => setForm({ ...form, email: e.target.value })}
+                    placeholder={t.emailPlaceholder}
+                    className="w-full bg-transparent border border-taupe/40 rounded px-3 py-2 text-charcoal placeholder-taupe/50 text-sm focus:outline-none focus:border-gold transition-colors"
+                  />
+                </div>
+                <div className="flex gap-4 pt-2">
+                  <button
+                    type="submit"
+                    className="flex-1 bg-gold text-background py-2 rounded text-sm font-medium hover:bg-gold/90 transition-colors"
+                  >
+                    {t.submit}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={handleClose}
+                    className="flex-1 border border-taupe/40 text-charcoal py-2 rounded text-sm font-medium hover:border-taupe transition-colors"
+                  >
+                    {t.cancel}
+                  </button>
+                </div>
+              </form>
+            )}
+          </div>
+        </div>
+      )}
     </section>
   )
 }
